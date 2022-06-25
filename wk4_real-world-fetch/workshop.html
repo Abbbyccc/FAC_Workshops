@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real world fetch</title>
+</head>
+
+<body>
+
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+    <button id="submit">Submit</button>
+  </form>
+
+
+
+  <script>
+    //  Challenge 1 & 2
+
+    // fetch("https://echo.oliverjam.workers.dev/status/404")
+    //   .then(console.log)
+    //   .catch(console.error);
+
+    // fetch("https://echo.oliverjam.workers.dev/status/404")
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       console.log(response.status);
+    //     }
+
+    //   })
+    //   .catch(console.error)
+
+    // fetch("https://echo.oliverjam.workers.dev/status/404")
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       throw new Error(response.status);
+    //     }
+    //     console.log(response);
+    //   })
+    //   .catch(console.error)
+
+
+    // Challenge 3
+    // const data = { name: "abby" }
+    // fetch("https://echo.oliverjam.workers.dev/json", {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(data),
+    // })
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     console.log('Success:', data);
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error:', error);
+    //   });
+
+
+    // Challenge 4
+    // const theForm = document.querySelector('form')
+    // theForm.addEventListener("submit", (event) => {
+    //   event.preventDefault();
+    //   const fname = document.querySelector("#fname").value
+    //   const lname = document.querySelector("#lname").value
+    //   const data = {
+    //     first: fname,
+    //     last: lname
+    //   }
+    //   fetch("https://echo.oliverjam.workers.dev/json", {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(data),
+    //   })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //       console.log('Success:', data);
+    //     })
+    //     .catch((error) => {
+    //       console.error('Error:', error);
+    //     });
+    // })
+
+    // Challenge 5
+    // const theForm = document.querySelector('form')
+    // theForm.addEventListener("submit", (event) => {
+    //   event.preventDefault();
+    //   const theForm = document.querySelector('form')
+    //   const formData = new FormData(theForm)
+    //   let data = Object.fromEntries(formData)
+
+    //   fetch("https://echo.oliverjam.workers.dev/json", {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(data),
+    //   })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //       console.log('Success:', data);
+    //     })
+    //     .catch((error) => {
+    //       console.error('Error:', error);
+    //     });
+    // })
+
+  </script>
+</body>
+
+</html>

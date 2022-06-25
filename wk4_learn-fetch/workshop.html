@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn Fetch & Promises</title>
+</head>
+
+<body>
+  <h1>Open the console</h1>
+  <script>
+
+
+    // challenge 1
+    // const feedback2 = fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+    // console.log(feedback2)
+
+    // challenge 2
+    // const feedback = fetch("https://pokeapi.co/api/v2/pokemon/pikachu").then(response => {
+    //   console.log(response)
+    // })
+
+    // challenge3
+    // const feedback3 = fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+    // feedback3
+    //   .then((response) => response.json())
+    //   .then((data) => console.log(data))
+
+    // challenge4
+    // const feedback4 = fetch()
+    // feedback4
+    //   .then((response) => response.json())
+    //   .then((pikachu) => console.log(pikachu))
+    //   .catch((error) => console.log(error))
+
+    // Task1
+    function getUser(name) {
+      return fetch("https://api.github.com/users/" + name)
+        .then(user => user.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+    }
+    getUser("oliverjam")
+
+
+    // Task2
+    // function getRepos(user) {
+    //   return fetch(user.repos_url).then((response) => response.json())
+
+    // }
+    // getUser("oliverjam")
+    //   .then(getRepos)
+    //   .then((data) => console.log(data))
+    //   .catch((error) => console.log(error))
+
+    // //task 3
+    // const oliverPromise = getUser("oliverjam");
+    // const abbyPromise = getUser("abbbyccc");
+
+    // Promise.all([oliverPromise, abbyPromise])
+    //   .then((data) => console.log(data))
+    //   .catch((error) => console.log(error))
+  </script>
+</body>
+
+</html>
