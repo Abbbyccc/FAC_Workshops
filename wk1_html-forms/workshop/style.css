@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #DADAD9;
+}
+
+/* All inputs other than checkboxes & radios
+ * should be block display so they sit on a new line
+ */
+input:not([type="checkbox"]):not([type="radio"]),
+button,
+textarea {
+  display: block;
+  font: inherit;
+  color: inherit;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+form>* {
+  margin-bottom: 1rem;
+}
+
+input+textarea {
+  background-color: #FBF9FF;
+}
+
+textarea {
+  width: 168px;
+}
