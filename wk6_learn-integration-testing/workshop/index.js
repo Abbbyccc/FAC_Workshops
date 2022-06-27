@@ -4,15 +4,17 @@ const multiply = (a, b) => a * b;
 const divide = (a, b) => a / b;
 
 function calculate(a, sign, b) {
+  let aNum = parseFloat(a)
+  let bNum = parseFloat(b)
   switch (sign) {
     case "+":
-      return add(a, b);
+      return add(aNum, bNum);
     case "-":
-      return subtract(a, b);
+      return subtract(aNum, bNum);
     case "*":
-      return multiply(a, b);
+      return multiply(aNum, bNum);
     case "/":
-      return divide(a, b);
+      return divide(aNum, bNum);
     default:
       return "Please enter a valid sign (+, -, *, /)";
   }
