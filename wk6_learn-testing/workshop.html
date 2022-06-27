@@ -16,7 +16,6 @@
       return x * x;
     }
 
-
     function equal(expect, actual, msg) {
       if (expect === actual) {
         const defaultmsg = `Expected ${expect} and received ${actual}`
@@ -26,6 +25,12 @@
         console.error("Fail: " + (msg || defaultmsg));
       }
     }
+
+    const result1 = square(2);
+    const expected1 = 4;
+    equal(result1, expected1);
+
+
     function notEqual(expect, actual) {
       if (expect !== actual) {
         const defaultmsg = `Expected ${expect} is different to ${actual} `
