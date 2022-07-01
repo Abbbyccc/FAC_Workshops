@@ -31,9 +31,9 @@ test('check if the cauculater result shown correctly on the page', () => {
     const signInput = document.querySelector("select");
     const bInput = document.querySelector("#b");
 
-    aInput.value = "2";
+    aInput.value = "5";
     signInput.value = "+";
-    bInput.value = "3";
+    bInput.value = "22";
 
     const submitBtn = document.querySelector("button")
     submitBtn.click()
@@ -41,7 +41,7 @@ test('check if the cauculater result shown correctly on the page', () => {
     const result = document.querySelector("#result")
 
 
-    equal(result.textContent, '5')
+    equal(result.textContent, '27')
     result.textContent = ""
 
 })

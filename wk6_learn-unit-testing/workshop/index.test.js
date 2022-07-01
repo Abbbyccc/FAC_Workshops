@@ -12,8 +12,8 @@ test("searchParamsToObject should return an Object from the given string", () =>
 })
 
 test("isLeapYear should return if input is leap year", () => {
-    equal(isLeapYear("hi"), "Please enter a positive number", "Input must be a number");
-    equal(isLeapYear(-1500), "Please enter type number only", "Input must be positive");
+    equal(isLeapYear("hi"), "Please enter type number only", "Input must be a number");
+    equal(isLeapYear(-1500), "Please enter a positive number", "Input must be positive");
     equal(isLeapYear(1900), false, "1900 should not be a leap year");
     equal(isLeapYear(2007), false, "2007 should not be a leap year");
     equal(isLeapYear(1901), false, "1901 should not be a leap year");
@@ -21,8 +21,8 @@ test("isLeapYear should return if input is leap year", () => {
 });
 
 test("isLeapYear should return if input is leap year", () => {
-    equal(isLeapYear("hi_Abby"), "Please enter a positive number", "Input must be a number");
-    equal(isLeapYear(-2000), "Please enter type number only", "Input must be positive");
+    equal(isLeapYear("hi_Abby"), "Please enter type number only", "Input must be a number");
+    equal(isLeapYear(-2000), "Please enter a positive number", "Input must be positive");
     equal(isLeapYear(2092), true, "2092 should be a leap year");
     equal(isLeapYear(2008), true, "2008 should be a leap year");
 });
