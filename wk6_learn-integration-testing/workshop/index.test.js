@@ -14,6 +14,7 @@ test("Can divide numbers and string numbers", () => {
     equal(calculate('6', '/', 2), 3)
     equal(calculate(89474, '/', 2), 44737)
     equal(calculate('2', '/', '2'), 1)
+    equal(calculate('23', '/', '2'), 11.5)
 })
 
 test("Can multiply numbers and string numbers", () => {
