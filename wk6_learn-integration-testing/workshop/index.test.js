@@ -33,7 +33,7 @@ test('check if the cauculater result shown correctly on the page', () => {
     const bInput = document.querySelector("#b");
 
     aInput.value = "5";
-    signInput.value = "+";
+    signInput.value = "-";
     bInput.value = "22";
 
     const submitBtn = document.querySelector("button")

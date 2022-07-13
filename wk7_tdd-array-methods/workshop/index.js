@@ -45,16 +45,15 @@ function some(array, func) {
   for (let i = 0; i < array.length; i++) {
     if (func(array[i])) {
       return true
-    } else {
-      return false
     }
   }
+  return false
 }
 
 function find(array, func) {
   if (!Array.isArray(array)) return "Please pass an array";
   if (typeof func !== "function") return "Please pass a find function";
-  let count = 0
+  // let count = 0
   for (let i = 0; i < array.length; i++) {
     if (func(array[i])) {
       return array[i]
@@ -63,14 +62,15 @@ function find(array, func) {
   return undefined
 }
 
-function reduce(array, func) {
+function reduce(array, func, intiate) {
   if (!Array.isArray(array)) return "Please pass an array";
   if (typeof func !== "function") return "Please pass a reduce function";
+
   let result = array[0]
   for (let i = 1; i < array.length; i++) {
-    result = func(result, array[i], array)
+    result = func(result, array[i])
   }
-  return result
+  return intiate + result
 }
 
 

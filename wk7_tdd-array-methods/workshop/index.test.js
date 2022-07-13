@@ -34,6 +34,11 @@ test("filter() should transform each element of the array using the fn argument"
   equal(result.length, 0)
 });
 
+test("filter() should transform each element of the array using the fn argument", () => {
+  const result = filter([1], (x) => x < 1);
+  equal(result[0], undefined)
+});
+
 
 // testing every()
 //test if filter() take an array and func as arguments
@@ -67,7 +72,7 @@ test("some() should return true if some element passes the condtion", () => {
 });
 
 test("some() should return true if some element passes the condtion", () => {
-  const result = some([4, 5, 6], (x) => x = 4);
+  const result = some([4, 5, 6], (x) => x = 5);
   equal(result, true);
 });
 
@@ -103,7 +108,16 @@ test("reduce() should running the reducer function across all elements of the ar
   equal(result, -11);
 });
 
+test("reduce() should running the reducer function across all elements of the array, and return a value", () => {
+  const result = reduce([1, 4, 3, 5], (total, x) => total - x, 2);
+  equal(result, -9);
+});
 
+test("reduce() should running the reducer function across all elements of the array, and return a value", () => {
+  const result = reduce([1, 2, 3], (total, x) => total + x, 9);
+  equal(result, 15);
+
+});
 // testing flat()
 test("flat() should turn a nested array into a single-level array", () => {
   const result = flat([1, [2, 3]]);
